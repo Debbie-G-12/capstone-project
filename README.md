@@ -1,31 +1,59 @@
-# capstone-project
+# Capstone Project – Django Web Application
 
-Project Title: Capstone Project – Django Web Application
+## Project Overview
 
-Project Overview
+This is my capstone project for the final module. The goal is to build a Django-based web application that demonstrates my understanding of full-stack development. The application includes user authentication, CRUD functionality, and a simple, clean user interface.
 
-This project is my capstone project for the final module. I am building a Django-based web application that includes user authentication, core CRUD functionality, and a clean UI. The goal is to apply everything learned throughout the course and create a complete, functional, and well-structured project.
+## Current Progress
 
- *Current Progress
+* Django project and app created
+* Initial models implemented
+* User authentication started
+* Basic views and templates added
+* GitHub repository initialized and initial code pushed
 
-Created a new Django project
+## Technologies
 
-Set up the main app structure
+* Python
+* Django
+* HTML & CSS
+* JavaScript (optional enhancements)
 
-Configured virtual environment and requirements file
+## How to Run the Project
 
-Built initial models
+1. Clone the repository:
 
-Set up basic views and templates
+   ```
+   git clone https://github.com/your-username/your-repo-name.git
+   ```
+2. Navigate into the project folder
+3. Create and activate a virtual environment
+4. Install dependencies:
 
-Pushed initial work to GitHub
+   ```
+   pip install -r requirements.txt
+   ```
+5. Run migrations:
 
-# Technologies
+   ```
+   python manage.py migrate
+   ```
+6. Start the server:
 
-Python
+   ```
+   python manage.py runserver
+   ```
+7. Open your browser at `http://127.0.0.1:8000`
 
-Django
+## Next Steps
 
-HTML/CSS
+* Complete CRUD operations
+* Enhance UI and templates
+* Add search, filter, and pagination
+* Implement additional features
+* Write tests
+* Prepare for deployment
 
-JavaScript (optional enhancements)
+---
+
+*This README is meant to be clear, clean, and visually pleasant while giving all necessary instructions and project information.*
