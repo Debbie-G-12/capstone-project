@@ -58,4 +58,8 @@ This is my capstone project for the final module. The goal is to build a Django-
 
 *This README is meant to be clear, clean, and visually pleasant while giving all necessary instructions and project information.*
 
+
+## Progress Update
+Capstone Part 4: Continued backend development and improvements.
+
  
