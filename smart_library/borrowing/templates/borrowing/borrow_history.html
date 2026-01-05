@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Authors - Smart Library</title>
+    <title>Borrowing History - Smart Library</title>
     <style>
         body { font-family: Arial, sans-serif; background: #f5f7fa; color: #333; text-align: center; margin: 0; padding: 0; }
         h1 { color: #2c3e50; margin-top: 50px; font-size: 40px; }
-        table { margin: 20px auto; border-collapse: collapse; width: 60%; }
+        table { margin: 20px auto; border-collapse: collapse; width: 80%; }
         th, td { border: 1px solid #ccc; padding: 12px 15px; text-align: center; }
         th { background-color: #3498db; color: white; }
         tr:nth-child(even) { background-color: #ecf0f1; }
@@ -17,36 +17,35 @@
     </style>
 </head>
 <body>
-    
-    <h1>Authors</h1>
+    <h1>My Borrowing History</h1>
     <table>
         <tr>
-            <th>Name</th>
-            <th>Bio</th>
+            <th>Book Title</th>
+            <th>Borrowed At</th>
+            <th>Returned At</th>
             <th>Actions</th>
         </tr>
         <tr>
-            <td>Author A</td>
-            <td>Biography of Author A</td>
+            <td>Book 1</td>
+            <td>2026-01-01</td>
+            <td>2026-01-05</td>
             <td>
-                <a href="#" class="button">Edit</a>
-                <a href="#" class="button">Delete</a>
+                <a href="/borrow/return/1/" class="button">Return</a>
             </td>
         </tr>
         <tr>
-            <td>Author B</td>
-            <td>Biography of Author B</td>
+            <td>Book 2</td>
+            <td>2026-01-03</td>
+            <td>Not Returned</td>
             <td>
-                <a href="#" class="button">Edit</a>
-                <a href="#" class="button">Delete</a>
+                <a href="/borrow/return/2/" class="button">Return</a>
             </td>
         </tr>
     </table>
 
     <div class="nav-home">
         <a href="/" class="button">Home</a>
-        <a href="/authors/add/" class="button">Add New Author</a>
+        <a href="/books/" class="button">View Books</a>
     </div>
-
 </body>
 </html>
