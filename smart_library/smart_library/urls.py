@@ -1,34 +1,23 @@
-"""
-URL configuration for smart_library project.
-
-The `urlpatterns` list routes URLs to views. For more information please see:
-    https://docs.djangoproject.com/en/6.0/topics/http/urls/
-Examples:
-Function views
-    1. Add an import:  from my_app import views
-    2. Add a URL to urlpatterns:  path('', views.home, name='home')
-Class-based views
-    1. Add an import:  from other_app.views import Home
-    2. Add a URL to urlpatterns:  path('', Home.as_view(), name='home')
-Including another URLconf
-    1. Import the include() function: from django.urls import include, path
-    2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
-"""
-from django.contrib import admin
-from django.urls import path
 from django.contrib import admin
 from django.urls import path, include
+from borrowing import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    
+    # Landing page
+    path('', views.home, name='home'),
+    
+    # Pages for demo
+    path('books/', views.books_view, name='books'),
+    path('authors/', views.authors_view, name='authors'),
+    path('categories/', views.categories_view, name='categories'),
+    path('borrow/history/', views.borrow_history_view, name='borrow_history'),
+    
+    # Your real API endpoints
     path('api/accounts/', include('accounts.urls')),
     path('api/books/', include('books.urls')),
-    path('api/authors/', include('authors.urls')),
-    path('api/categories/', include('categories.urls')),
+    path('api/authors/', include('books.urls')),  # adapt if needed
+    path('api/categories/', include('books.urls')),  # adapt if needed
     path('api/borrowing/', include('borrowing.urls')),
-]
-
-
-urlpatterns = [
-    path('admin/', admin.site.urls),
 ]
