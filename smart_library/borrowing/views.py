@@ -7,10 +7,9 @@ from .serializers import BorrowRecordSerializer
 from books.models import Book
 from django.utils import timezone
 
-# --- Backend API Views -- !
+# --- API Views ---
 class BorrowBookView(APIView):
     permission_classes = [permissions.IsAuthenticated]
-
     def post(self, request, book_id):
         book = Book.objects.get(id=book_id)
         if not book.is_available:
@@ -23,11 +22,8 @@ class BorrowBookView(APIView):
 
 class ReturnBookView(APIView):
     permission_classes = [permissions.IsAuthenticated]
-
     def post(self, request, book_id):
-        record = BorrowRecord.objects.filter(
-            user=request.user, book_id=book_id, returned_at__isnull=True
-        ).first()
+        record = BorrowRecord.objects.filter(user=request.user, book_id=book_id, returned_at__isnull=True).first()
         if not record:
             return Response({'error': 'No active borrow found'}, status=400)
         record.returned_at = timezone.now()
@@ -40,11 +36,10 @@ class ReturnBookView(APIView):
 class BorrowHistoryView(generics.ListAPIView):
     serializer_class = BorrowRecordSerializer
     permission_classes = [permissions.IsAuthenticated]
-
     def get_queryset(self):
         return BorrowRecord.objects.filter(user=self.request.user)
 
-# --- HTML Demo Views for Loom buttons ---
+# --- HTML Demo Views ---
 def home(request):
     return render(request, 'borrowing/home.html')
 
