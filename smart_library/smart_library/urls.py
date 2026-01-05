@@ -14,7 +14,7 @@ urlpatterns = [
     path('categories/', views.categories_view, name='categories'),
     path('borrow/history/', views.borrow_history_view, name='borrow_history'),
     
-    # Your real API endpoints
+    # API endpoints
     path('api/accounts/', include('accounts.urls')),
     path('api/books/', include('books.urls')),
     path('api/authors/', include('books.urls')),  # adapt if needed
